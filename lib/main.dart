@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodhub/pages/Home.dart';
 import 'package:foodhub/pages/bottomnavbar.dart';
+import 'package:foodhub/pages/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Bottomnavbar(),
     );

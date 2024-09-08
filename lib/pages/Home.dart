@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodhub/pages/foodetails.dart';
 import 'package:foodhub/widget/widget_support.dart';
 
 class Home extends StatefulWidget {
@@ -14,9 +15,9 @@ class _Home extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFE0B2),
+      backgroundColor: Color(0xFFF0FFF0),
       body: Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 10.0,
           left: 20.0,
         ),
@@ -31,86 +32,97 @@ class _Home extends State<Home> {
                   style: AppWidget.boldTextFieldStlye(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(right: 20),
-                  padding: EdgeInsets.all(3),
+                  margin: const EdgeInsets.only(right: 20),
+                  padding: const EdgeInsets.all(3),
                   decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.shopping_cart,
                     color: Colors.white,
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 30.0),
+            const SizedBox(height: 30.0),
             Text(
-              "Delicious Food",
+              "Welcome to Nepal Eats",
               style: AppWidget.HeadLineTextFieldStlye(),
             ),
             Text(
-              "Discover and get Great Food",
+              "Authentic Nepali Delights at Your Doorstep",
               style: AppWidget.LightTextFieldStlye(),
             ),
-            SizedBox(height: 20.0),
-            Container(margin: EdgeInsets.only(right: 20), child: showItem()),
-            SizedBox(
+            const SizedBox(height: 20.0),
+            Container(
+                margin: const EdgeInsets.only(right: 20), child: showItem()),
+            const SizedBox(
               height: 20.0,
             ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Container(
-                    margin: EdgeInsets.all(4),
-                    child: Material(
-                      elevation: 5.0,
-                      borderRadius: BorderRadius.circular(20),
-                      child: Container(
-                        padding: EdgeInsets.all(14),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipOval(
-                              child: Image.asset(
-                                "images/salad.jpg",
-                                height: 150,
-                                width: 150,
-                                fit: BoxFit.cover,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Foodetails()));
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.all(4),
+                      child: Material(
+                        elevation: 5.0,
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color.fromARGB(255, 233, 232, 250),
+                        child: Container(
+                          padding: const EdgeInsets.all(14),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipOval(
+                                child: Image.asset(
+                                  "images/salad.jpg",
+                                  height: 150,
+                                  width: 150,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            Text("Veggie Taco  Mash",
-                                style: AppWidget.HeadLineTextFieldStlye()),
-                            SizedBox(
-                              height: 5.0,
-                            ),
-                            Text(
-                              "Fresh and Healthy",
-                              style: AppWidget.SemiBoldTextFieldStlye(),
-                            ),
-                            SizedBox(
-                              height: 5.0,
-                            ),
-                            Text(
-                              "\$25",
-                              style: AppWidget.SemiBoldTextFieldStlye(),
-                            )
-                          ],
+                              Text("Veggie Taco  Mash",
+                                  style: AppWidget.HeadLineTextFieldStlye()),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                              Text(
+                                "Fresh and Healthy",
+                                style: AppWidget.SemiBoldTextFieldStlye(),
+                              ),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                              Text(
+                                "\$25",
+                                style: AppWidget.SemiBoldTextFieldStlye(),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15.0,
                   ),
                   Container(
-                    margin: EdgeInsets.all(4),
+                    margin: const EdgeInsets.all(4),
                     child: Material(
                       elevation: 5.0,
                       borderRadius: BorderRadius.circular(20),
+                      color: Color.fromARGB(255, 233, 232, 250),
                       child: Container(
-                        padding: EdgeInsets.all(14),
+                        padding: const EdgeInsets.all(14),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -124,14 +136,14 @@ class _Home extends State<Home> {
                             ),
                             Text("Veggie Taco  Mash",
                                 style: AppWidget.HeadLineTextFieldStlye()),
-                            SizedBox(
+                            const SizedBox(
                               height: 5.0,
                             ),
                             Text(
                               "Fresh and Healthy",
                               style: AppWidget.SemiBoldTextFieldStlye(),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5.0,
                             ),
                             Text(
@@ -146,18 +158,19 @@ class _Home extends State<Home> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Container(
-                margin: EdgeInsets.only(right: 20.0),
+                margin: const EdgeInsets.only(right: 20.0),
                 child: Material(
                   elevation: 5.0,
                   borderRadius: BorderRadius.circular(20),
+                  color: Color.fromARGB(255, 233, 232, 250),
                   child: Container(
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -169,32 +182,32 @@ class _Home extends State<Home> {
                             fit: BoxFit.cover,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
                         Column(
                           children: [
-                            Container(
+                            SizedBox(
                               width: MediaQuery.of(context).size.width / 2,
                               child: Text(
                                 "Chicken salad",
                                 style: AppWidget.HeadLineTextFieldStlye(),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5.0,
                             ),
-                            Container(
+                            SizedBox(
                               width: MediaQuery.of(context).size.width / 2,
                               child: Text(
                                 "Fresh salad with cheese and healthy toppings",
                                 style: AppWidget.SemiBoldTextFieldStlye(),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5.0,
                             ),
-                            Container(
+                            SizedBox(
                               width: MediaQuery.of(context).size.width / 2,
                               child: Text(
                                 "\$15",
@@ -234,11 +247,11 @@ class _Home extends State<Home> {
             child: Container(
               decoration: BoxDecoration(
                 color: icecream
-                    ? Color.fromARGB(255, 187, 168, 168)
+                    ? const Color.fromARGB(255, 187, 168, 168)
                     : Colors.white,
                 borderRadius: BorderRadius.circular(5),
               ),
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               child: Image.asset(
                 "images/icecream.jpg",
                 height: 70,
@@ -262,11 +275,12 @@ class _Home extends State<Home> {
             borderRadius: BorderRadius.circular(10),
             child: Container(
               decoration: BoxDecoration(
-                color:
-                    pizza ? Color.fromARGB(255, 187, 168, 168) : Colors.white,
+                color: pizza
+                    ? const Color.fromARGB(255, 187, 168, 168)
+                    : Colors.white,
                 borderRadius: BorderRadius.circular(5),
               ),
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               child: Image.asset(
                 "images/pizza.jpg",
                 height: 70,
@@ -290,11 +304,12 @@ class _Home extends State<Home> {
             borderRadius: BorderRadius.circular(10),
             child: Container(
               decoration: BoxDecoration(
-                color:
-                    salad ? Color.fromARGB(255, 187, 168, 168) : Colors.white,
+                color: salad
+                    ? const Color.fromARGB(255, 187, 168, 168)
+                    : Colors.white,
                 borderRadius: BorderRadius.circular(5),
               ),
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               child: Image.asset(
                 "images/salad.jpg",
                 height: 70,
@@ -318,11 +333,12 @@ class _Home extends State<Home> {
             borderRadius: BorderRadius.circular(10),
             child: Container(
               decoration: BoxDecoration(
-                color:
-                    burger ? Color.fromARGB(255, 187, 168, 168) : Colors.white,
+                color: burger
+                    ? const Color.fromARGB(255, 187, 168, 168)
+                    : Colors.white,
                 borderRadius: BorderRadius.circular(5),
               ),
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               child: Image.asset(
                 "images/burger.jpg",
                 height: 70,
