@@ -16,7 +16,7 @@ class _Foodetails extends State<Foodetails> {
         MediaQuery.of(context).size.width * 0.7; // Adjust size as needed
 
     return Scaffold(
-      backgroundColor: Color(0xFFF5F5F5),
+      backgroundColor: const Color(0xFFF5F5F5),
       body: Container(
         margin: const EdgeInsets.only(top: 50, left: 20.0, right: 20.0),
         child: Column(
@@ -61,7 +61,7 @@ class _Foodetails extends State<Foodetails> {
                           ),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       GestureDetector(
                         onTap: () {
                           if (a > 1) {
@@ -80,14 +80,14 @@ class _Foodetails extends State<Foodetails> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15.0,
                       ),
                       Text(
                         a.toString(),
                         style: AppWidget.SemiBoldTextFieldStlye(),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15.0,
                       ),
                       GestureDetector(
@@ -107,7 +107,7 @@ class _Foodetails extends State<Foodetails> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20.0,
                   ),
                   Text(
@@ -115,7 +115,7 @@ class _Foodetails extends State<Foodetails> {
                     maxLines: 5,
                     style: AppWidget.LightTextFieldStlye(),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 50.0,
                   ),
                   Row(
@@ -124,14 +124,14 @@ class _Foodetails extends State<Foodetails> {
                         "Delivery Time",
                         style: AppWidget.LightTextFieldStlye(),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5.0,
                       ),
-                      Icon(
+                      const Icon(
                         Icons.alarm,
                         color: Colors.red,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15.0,
                       ),
                       Text(
@@ -160,36 +160,36 @@ class _Foodetails extends State<Foodetails> {
                         ),
                         Container(
                           width: MediaQuery.of(context).size.width / 2,
-                          padding: EdgeInsets.all(5),
+                          padding: const EdgeInsets.all(5),
                           decoration: BoxDecoration(
                               color: Colors.red,
                               borderRadius: BorderRadius.circular(5)),
                           child: Row(
                             children: [
-                              SizedBox(
+                              const SizedBox(
                                 width: 50,
                               ),
-                              Text(
+                              const Text(
                                 "Add to cart",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
                                     fontFamily: "Poppins"),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 40.0,
                               ),
                               Container(
-                                padding: EdgeInsets.all(3),
+                                padding: const EdgeInsets.all(3),
                                 decoration: BoxDecoration(
                                     color: Colors.red,
                                     borderRadius: BorderRadius.circular(5)),
-                                child: Icon(
+                                child: const Icon(
                                   Icons.shopping_cart_outlined,
                                   color: Colors.white,
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10.0,
                               )
                             ],
