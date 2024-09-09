@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:foodhub/pages/Home.dart';
 import 'package:foodhub/pages/bottomnavbar.dart';
 import 'package:foodhub/pages/login.dart';
 
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Bottomnavbar(),
+      home: Login(),
     );
   }
 }

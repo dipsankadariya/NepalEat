@@ -18,7 +18,7 @@ class _Login extends State<Login> {
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 2.5,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   gradient: LinearGradient(
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft,
@@ -32,15 +32,15 @@ class _Login extends State<Login> {
                   EdgeInsets.only(top: MediaQuery.of(context).size.height / 3),
               height: MediaQuery.of(context).size.height / 2,
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular((20)),
                       topRight: Radius.circular((20)))),
-              child: Text(""),
+              child: const Text(""),
             ),
             Container(
-              margin: EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
+              margin: const EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
               child: Column(
                 children: [
                   Center(
@@ -49,13 +49,13 @@ class _Login extends State<Login> {
                     width: MediaQuery.of(context).size.width / 1.5,
                     fit: BoxFit.cover,
                   )),
-                  SizedBox(
+                  const SizedBox(
                     height: 50.0,
                   ),
                   Material(
                     elevation: 5.0,
                     child: Container(
-                      padding: EdgeInsets.only(left: 20.0, right: 20.0),
+                      padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                       height: MediaQuery.of(context).size.height / 2.5,
                       decoration: BoxDecoration(
                           color: Colors.white,
@@ -63,7 +63,7 @@ class _Login extends State<Login> {
                       width: MediaQuery.of(context).size.width,
                       child: Column(
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: 30.0,
                           ),
                           Text(
@@ -74,9 +74,9 @@ class _Login extends State<Login> {
                             decoration: InputDecoration(
                                 hintText: "Email",
                                 hintStyle: AppWidget.SemiBoldTextFieldStlye(),
-                                prefixIcon: Icon(Icons.email_outlined)),
+                                prefixIcon: const Icon(Icons.email_outlined)),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 50.0,
                           ),
                           Text(
@@ -87,9 +87,10 @@ class _Login extends State<Login> {
                             decoration: InputDecoration(
                                 hintText: "Password",
                                 hintStyle: AppWidget.SemiBoldTextFieldStlye(),
-                                prefixIcon: Icon(Icons.password_outlined)),
+                                prefixIcon:
+                                    const Icon(Icons.password_outlined)),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20.0,
                           ),
                           Container(

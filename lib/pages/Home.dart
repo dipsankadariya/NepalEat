@@ -15,7 +15,7 @@ class _Home extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF0FFF0),
+      backgroundColor: const Color(0xFFF0FFF0),
       body: Container(
         margin: const EdgeInsets.only(
           top: 10.0,
@@ -69,14 +69,14 @@ class _Home extends State<Home> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Foodetails()));
+                              builder: (context) => const Foodetails()));
                     },
                     child: Container(
                       margin: const EdgeInsets.all(4),
                       child: Material(
                         elevation: 5.0,
                         borderRadius: BorderRadius.circular(20),
-                        color: Color.fromARGB(255, 233, 232, 250),
+                        color: const Color.fromARGB(255, 233, 232, 250),
                         child: Container(
                           padding: const EdgeInsets.all(14),
                           child: Column(
@@ -84,19 +84,19 @@ class _Home extends State<Home> {
                             children: [
                               ClipOval(
                                 child: Image.asset(
-                                  "images/salad.jpg",
+                                  "Images/thali.jpg",
                                   height: 150,
                                   width: 150,
                                   fit: BoxFit.cover,
                                 ),
                               ),
-                              Text("Veggie Taco  Mash",
+                              Text("Non-Veg Thali",
                                   style: AppWidget.HeadLineTextFieldStlye()),
                               const SizedBox(
                                 height: 5.0,
                               ),
                               Text(
-                                "Fresh and Healthy",
+                                "Delicious Dal Bhaat",
                                 style: AppWidget.SemiBoldTextFieldStlye(),
                               ),
                               const SizedBox(
@@ -120,7 +120,7 @@ class _Home extends State<Home> {
                     child: Material(
                       elevation: 5.0,
                       borderRadius: BorderRadius.circular(20),
-                      color: Color.fromARGB(255, 233, 232, 250),
+                      color: const Color.fromARGB(255, 233, 232, 250),
                       child: Container(
                         padding: const EdgeInsets.all(14),
                         child: Column(
@@ -128,19 +128,19 @@ class _Home extends State<Home> {
                           children: [
                             ClipOval(
                               child: Image.asset(
-                                "images/salad.jpg",
+                                "images/momo.jpg",
                                 height: 150,
                                 width: 150,
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            Text("Veggie Taco  Mash",
+                            Text("Non-veg Momo",
                                 style: AppWidget.HeadLineTextFieldStlye()),
                             const SizedBox(
                               height: 5.0,
                             ),
                             Text(
-                              "Fresh and Healthy",
+                              "Momo with chicken filling",
                               style: AppWidget.SemiBoldTextFieldStlye(),
                             ),
                             const SizedBox(
@@ -168,7 +168,7 @@ class _Home extends State<Home> {
                 child: Material(
                   elevation: 5.0,
                   borderRadius: BorderRadius.circular(20),
-                  color: Color.fromARGB(255, 233, 232, 250),
+                  color: const Color.fromARGB(255, 233, 232, 250),
                   child: Container(
                     padding: const EdgeInsets.all(5),
                     child: Row(
