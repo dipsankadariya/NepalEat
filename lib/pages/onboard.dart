@@ -98,7 +98,7 @@ class _Onboard extends State<Onboard> {
               width: double.infinity,
               child: Center(
                 child: Text(
-                  "Next",
+                  currentIndex == contents.length - 1 ? "Get Started" : "Next",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
