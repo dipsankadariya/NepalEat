@@ -12,8 +12,7 @@ List<UnboardingContenet> contents = [
       image: "images/img1.jpg",
       title: "welcome to Nepal Eats"),
   UnboardingContenet(
-      description:
-          "Select the food from the menu \n  From Wide variety of options ,",
+      description: "Variety of Foods and Drinks",
       image: "images/img2.jpg",
       title: "Good Food ,Good Mood"),
   UnboardingContenet(

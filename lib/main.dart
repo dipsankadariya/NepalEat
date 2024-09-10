@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodhub/pages/bottomnavbar.dart';
-import 'package:foodhub/pages/login.dart';
 import 'package:foodhub/pages/onboard.dart';
-import 'package:foodhub/pages/signup.dart';
 
 void main() {
   runApp(const MyApp());
