@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:foodhub/pages/signup.dart';
-import 'package:foodhub/widget/widget_support.dart';
+import 'package:foodhub/pages/login.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+import '../widget/widget_support.dart';
+
+class Signup extends StatefulWidget {
+  const Signup({super.key});
 
   @override
-  State<Login> createState() => _Login();
+  State<Signup> createState() => _Signup();
 }
 
-class _Login extends State<Login> {
+class _Signup extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,11 +31,11 @@ class _Login extends State<Login> {
             ),
             Container(
               margin: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height / 1.4),
-              height: MediaQuery.of(context).size.height / 1,
+                  top: MediaQuery.of(context).size.height / 1.5),
+              height: MediaQuery.of(context).size.height / 1.5,
               width: MediaQuery.of(context).size.width,
               decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 225, 104, 104),
+                  color: Colors.redAccent,
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular((1)),
                       topRight: Radius.circular((1)))),
@@ -71,8 +72,18 @@ class _Login extends State<Login> {
                             height: 30.0,
                           ),
                           Text(
-                            "Login",
+                            "SignUp",
                             style: AppWidget.HeadLineTextFieldStlye(),
+                          ),
+                          TextField(
+                            decoration: InputDecoration(
+                                hintText: "Name",
+                                hintStyle: AppWidget.SemiBoldTextFieldStlye(),
+                                prefixIcon:
+                                    const Icon(Icons.person_2_outlined)),
+                          ),
+                          const SizedBox(
+                            height: 50.0,
                           ),
                           TextField(
                             decoration: InputDecoration(
@@ -83,10 +94,6 @@ class _Login extends State<Login> {
                           const SizedBox(
                             height: 50.0,
                           ),
-                          Text(
-                            "Password",
-                            style: AppWidget.HeadLineTextFieldStlye(),
-                          ),
                           TextField(
                             obscureText: true,
                             decoration: InputDecoration(
@@ -94,16 +101,6 @@ class _Login extends State<Login> {
                                 hintStyle: AppWidget.SemiBoldTextFieldStlye(),
                                 prefixIcon:
                                     const Icon(Icons.password_outlined)),
-                          ),
-                          SizedBox(
-                            height: 30,
-                          ),
-                          Container(
-                            alignment: Alignment.topRight,
-                            child: Text(
-                              "Forgot Password ?",
-                              style: AppWidget.SemiBoldTextFieldStlye(),
-                            ),
                           ),
                           SizedBox(
                             height: 30,
@@ -119,7 +116,7 @@ class _Login extends State<Login> {
                                   borderRadius: BorderRadius.circular(20)),
                               child: Center(
                                 child: Text(
-                                  "Login",
+                                  "Sign Up",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 20.0,
@@ -137,10 +134,10 @@ class _Login extends State<Login> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Signup()));
+                                      builder: (context) => Login()));
                             },
                             child: Text(
-                              "Not Signed in yet? Sign up",
+                              "Have an accound? Login",
                               style: AppWidget.SemiBoldTextFieldStlye(),
                             ),
                           )
