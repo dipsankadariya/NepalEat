@@ -1,7 +1,12 @@
 # Nepal Eats 🍲
 
+I'm still working on the project.
+
+
+
 Welcome to **Nepal Eats**, the online  food delivery app designed to bring delicious meals right to your door! Built with **Flutter** and powered by **Firebase**, Nepal Eats provides a seamless experience with secure authentication, integrated wallet functionality, and a clean, easy-to-use UI.
-The app is still in development phases:
+
+
 
 ## Key Features
 ### 1. User Authentication
