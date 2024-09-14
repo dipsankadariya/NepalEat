@@ -26,25 +26,25 @@ class _SignupState extends State<Signup> {
                 email: _emailController.text,
                 password: _passwordController.text);
 
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
             backgroundColor: Colors.green,
             content: Text(
               "Registered Successfully",
               style: TextStyle(fontSize: 20.0),
             )));
 
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Bottomnavbar()));
+        Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => const Bottomnavbar()));
       } on FirebaseException catch (e) {
         if (e.code == 'weak-password') {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
               backgroundColor: Colors.orangeAccent,
               content: Text(
                 "Password Provided is too Weak",
                 style: TextStyle(fontSize: 18.0),
               )));
         } else if (e.code == "email-already-in-use") {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
               backgroundColor: Colors.orangeAccent,
               content: Text(
                 "Account Already Exists",
@@ -173,13 +173,14 @@ class _SignupState extends State<Signup> {
                                 return null;
                               },
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 30,
                             ),
                             Material(
                               borderRadius: BorderRadius.circular(2),
                               child: Container(
-                                padding: EdgeInsets.symmetric(vertical: 8.0),
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 8.0),
                                 width: 200,
                                 height: 60,
                                 decoration: BoxDecoration(
@@ -188,7 +189,7 @@ class _SignupState extends State<Signup> {
                                 child: Center(
                                   child: GestureDetector(
                                     onTap: _registration,
-                                    child: Text(
+                                    child: const Text(
                                       "Sign Up",
                                       style: TextStyle(
                                           color: Colors.white,
@@ -200,7 +201,7 @@ class _SignupState extends State<Signup> {
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 30,
                             ),
                             GestureDetector(
@@ -208,7 +209,7 @@ class _SignupState extends State<Signup> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Login()));
+                                        builder: (context) => const Login()));
                               },
                               child: Text(
                                 "Have an account? Login",

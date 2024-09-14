@@ -95,7 +95,7 @@ class _Login extends State<Login> {
                                 prefixIcon:
                                     const Icon(Icons.password_outlined)),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           Container(
@@ -105,19 +105,20 @@ class _Login extends State<Login> {
                               style: AppWidget.SemiBoldTextFieldStlye(),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           Material(
                             borderRadius: BorderRadius.circular(2),
                             child: Container(
-                              padding: EdgeInsets.symmetric(vertical: 8.0),
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 8.0),
                               width: 200,
                               height: 60,
                               decoration: BoxDecoration(
                                   color: Colors.redAccent,
                                   borderRadius: BorderRadius.circular(20)),
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   "Login",
                                   style: TextStyle(
@@ -129,7 +130,7 @@ class _Login extends State<Login> {
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           GestureDetector(
@@ -137,7 +138,7 @@ class _Login extends State<Login> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Signup()));
+                                      builder: (context) => const Signup()));
                             },
                             child: Text(
                               "Not Signed in yet? Sign up",

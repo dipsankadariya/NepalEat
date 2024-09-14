@@ -42,7 +42,7 @@ class _Onboard extends State<Onboard> {
                 },
                 itemBuilder: (_, i) {
                   return Padding(
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       child: Column(
                         children: [
                           Container(

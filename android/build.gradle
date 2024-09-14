@@ -1,14 +1,13 @@
 buildscript {
-    ext.kotlin_version = '1.7.10' // Use the version you need
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0' // Use the version you need
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.google.gms:google-services:4.4.2' // Add this line
+        classpath 'com.android.tools.build:gradle:7.3.0' // Android Gradle plugin version
+        //classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Uncomment if using Kotlin
+        classpath 'com.google.gms:google-services:4.4.2' // Google Services plugin
     }
 }
 
@@ -20,10 +19,9 @@ allprojects {
 }
 
 rootProject.buildDir = '../build'
+
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
     project.evaluationDependsOn(':app')
 }
 
