@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "286006957836",
+    "project_id": "nepaleatsapp",
+    "storage_bucket": "nepaleatsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286006957836:android:e094f501e0a637d57fdb29",
+        "android_client_info": {
+          "package_name": "com.example.foodhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABrZN3hgPvNLCC6TahyAoPKy_W1D2U6Ek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
