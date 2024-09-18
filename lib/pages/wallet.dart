@@ -13,3 +13,5 @@ class _Wallet extends State<Wallet> {
     return Container();
   }
 }
+
+//wallet will be updated soon
