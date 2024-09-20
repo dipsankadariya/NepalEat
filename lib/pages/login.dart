@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:foodhub/pages/bottomnavbar.dart';
+import 'package:foodhub/pages/forgotpassword.dart';
 import 'package:foodhub/pages/signup.dart';
 import 'package:foodhub/widget/widget_support.dart';
 
@@ -148,11 +149,20 @@ class _LoginState extends State<Login> {
                               ),
                             ),
                             const SizedBox(height: 20),
-                            Container(
-                              alignment: Alignment.topRight,
-                              child: Text(
-                                "Forgot Password?",
-                                style: AppWidget.SemiBoldTextFieldStlye(),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ForgotPassword()));
+                              },
+                              child: Container(
+                                alignment: Alignment.topRight,
+                                child: Text(
+                                  "Forgot Password?",
+                                  style: AppWidget.SemiBoldTextFieldStlye(),
+                                ),
                               ),
                             ),
                             const SizedBox(height: 30),
