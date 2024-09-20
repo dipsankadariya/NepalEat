@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart'; // Import Firebase Auth package
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:foodhub/pages/bottomnavbar.dart';
 import 'package:foodhub/pages/login.dart';
 import '../widget/widget_support.dart';
 
 class Signup extends StatefulWidget {
-  const Signup({super.key});
+  const Signup({Key? key}) : super(key: key);
 
   @override
   State<Signup> createState() => _SignupState();
@@ -23,7 +23,7 @@ class _SignupState extends State<Signup> {
       try {
         UserCredential userCredential = await FirebaseAuth.instance
             .createUserWithEmailAndPassword(
-                email: _emailController.text,
+                email: _emailController.text.trim(),
                 password: _passwordController.text);
 
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
@@ -35,22 +35,21 @@ class _SignupState extends State<Signup> {
 
         Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => const Bottomnavbar()));
-      } on FirebaseException catch (e) {
+      } on FirebaseAuthException catch (e) {
+        String errorMessage;
         if (e.code == 'weak-password') {
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              backgroundColor: Colors.orangeAccent,
-              content: Text(
-                "Password Provided is too Weak",
-                style: TextStyle(fontSize: 18.0),
-              )));
-        } else if (e.code == "email-already-in-use") {
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              backgroundColor: Colors.orangeAccent,
-              content: Text(
-                "Account Already Exists",
-                style: TextStyle(fontSize: 18.0),
-              )));
+          errorMessage = "The password provided is too weak";
+        } else if (e.code == 'email-already-in-use') {
+          errorMessage = "The account already exists for that email";
+        } else {
+          errorMessage = e.message ?? "An error occurred";
         }
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            backgroundColor: Colors.redAccent,
+            content: Text(
+              errorMessage,
+              style: const TextStyle(fontSize: 18.0),
+            )));
       }
     }
   }
@@ -108,7 +107,7 @@ class _SignupState extends State<Signup> {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(50)),
-                      width: MediaQuery.of(context).size.width / 1,
+                      width: MediaQuery.of(context).size.width,
                       child: Form(
                         key: _formKey,
                         child: Column(
@@ -135,7 +134,7 @@ class _SignupState extends State<Signup> {
                               },
                             ),
                             const SizedBox(
-                              height: 50.0,
+                              height: 30.0,
                             ),
                             TextFormField(
                               controller: _emailController,
@@ -154,7 +153,7 @@ class _SignupState extends State<Signup> {
                               },
                             ),
                             const SizedBox(
-                              height: 50.0,
+                              height: 30.0,
                             ),
                             TextFormField(
                               controller: _passwordController,
@@ -176,20 +175,20 @@ class _SignupState extends State<Signup> {
                             const SizedBox(
                               height: 30,
                             ),
-                            Material(
-                              borderRadius: BorderRadius.circular(2),
-                              child: Container(
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 8.0),
-                                width: 200,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                    color: Colors.redAccent,
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: Center(
-                                  child: GestureDetector(
-                                    onTap: _registration,
-                                    child: const Text(
+                            GestureDetector(
+                              onTap: _registration,
+                              child: Material(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Container(
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 8.0),
+                                  width: 200,
+                                  height: 60,
+                                  decoration: BoxDecoration(
+                                      color: Colors.redAccent,
+                                      borderRadius: BorderRadius.circular(20)),
+                                  child: const Center(
+                                    child: Text(
                                       "Sign Up",
                                       style: TextStyle(
                                           color: Colors.white,
