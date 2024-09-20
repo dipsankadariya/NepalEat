@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodhub/pages/signup.dart';
 import 'package:foodhub/widget/content_model.dart';
-import 'package:foodhub/widget/widget_support.dart';
 
 class Onboard extends StatefulWidget {
   const Onboard({super.key});
